@@ -1,0 +1,19 @@
+Initial 9.0 release
+Sync to latest source changes ( 06/02/2024 )
+Move to common power-libperfmgr
+Tuned power hint
+Enable double tap to ambient
+Enable battery cycle count
+Import XiaomiParts from marble
+Added dirac sounds
+Switch back to vendor-defined color modes
+Switch to signed/user build to pass play integrity
+Upstreamed kernel
+Upstreamed KernelSU
+Fixed some apps crashing
+Fixed Dolby Vision
+Fixed incoming call number not showing correctly for some carriers ( for dirty flashing this build need to delete "data/vendor/radio" and then reboot to refresh data, for clean flash no need )
+
+Personal source changes:
+Added new refresh rate selector page
+Added support for light theme ( no more black qs when using light theme )
