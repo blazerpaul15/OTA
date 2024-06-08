@@ -1,0 +1,21 @@
+{
+  "response": [
+    {
+      "maintainer": "Paul",
+      "oem": "Redmi",
+      "device": "Redmi Note 8 Pro",
+      "filename": "EvolutionX-14.0-20240609-begonia-v9.0-Unofficial.zip",
+      "download": "https://sourceforge.net/projects/evox-for-redmi-note-8-pro/files/EvolutionX-14.0-20240609-begonia-v9.0-Unofficial.zip/download",
+      "timestamp": "1717913810",
+      "md5": "7b63968f49b4bcd48b747797b793917a",
+      "sha256": "935b043f61fcbb6fe50ce9a10e044c3e4054e3aa1a9084767d1079e1ea90c691",
+      "size": "1985072868",
+      "version": "9.0",
+      "buildtype": "Release",
+      "forum": "https://t.me/begoniaofficialph",
+      "firmware": "",
+      "paypal": "",
+      "telegram": ""
+    }
+  ]
+}

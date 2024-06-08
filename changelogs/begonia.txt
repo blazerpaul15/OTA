@@ -1,0 +1,14 @@
+Initial 9.0 release
+Synced to latest source changes ( 06/09/2024 )
+Upstreamed kernel to v4.14.348-openela
+Added Leica Camera
+Added Moto Dolby
+
+Personal source changes:
+Added support for light theme ( no more black qs when using light theme )
+
+Notes:
+Signed build
+Play Integrity passed by default
+Gapps included
+KernelSU support
