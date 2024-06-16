@@ -1,8 +1,9 @@
-Initial 9.0 release
-Synced to latest source changes ( 06/09/2024 )
-Upstreamed kernel to v4.14.348-openela
-Added Leica Camera
-Added Moto Dolby
+Fixed youtube lag when playing 1080p60 videos
+Added FMRadio
+Add support for 3-button headset
+Update brightness overlays from redfin
+Set screen density to 432
+Minor fixes and improvements
 
 Personal source changes:
 Added support for light theme ( no more black qs when using light theme )
