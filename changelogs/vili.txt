@@ -1,15 +1,35 @@
-Sync to latest source changes ( 06/09/2024 )
-Fixed VoWiFi
+Device:
+Switch to Blaze kernel
+Minor fixes and improvements
+
+Kernel:
+Compile kernel with ZyC Clang 19.0
+Merge caf tags to LA.UM.9.14.r1-24300-LAHAINA.QSSI14.0
+Upstreamed kernel to v5.4.278
+Update KernelSU to version 11897
+Treewide disable of useless tracings, debuggings, loggings etc
+Thermal locked to game thermal by default
+Added:
+Implement YAKT v17 tweaks
+BBR2 tcp congestion
+NTFS3 driver
+RAFC
+KFence
+SSG iosched from S918BXXU3CXCF
+zstd v1.5.3
+Oneplus cpu_freq_bouncing driver
+Boeffla wakelock blocker
+TEO governor
+Other source optimizations and improvements
 
 Personal source changes:
+Added GameSpace support
 Added new refresh rate selector page
 Added support for light theme ( no more black qs when using light theme )
 
 Notes:
-Signed build
+Signed user build
 Gapps included
 KernelSU support
-Play Integrity passed by default ( as of 06/09/2024 )
-Flash through TWRP
-Can dirty flash from old build ( 06/02/2024 )
-Clean flash is recommended
+Play Integrity passed by default
+Can dirty flash from old build
