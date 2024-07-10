@@ -1,35 +1,81 @@
-Device:
-Switch to Blaze kernel
-Minor fixes and improvements
-
-Kernel:
-Compile kernel with ZyC Clang 19.0
-Merge caf tags to LA.UM.9.14.r1-24300-LAHAINA.QSSI14.0
-Upstreamed kernel to v5.4.278
-Update KernelSU to version 11897
-Treewide disable of useless tracings, debuggings, loggings etc
-Thermal locked to game thermal by default
-Added:
-Implement YAKT v17 tweaks
-BBR2 tcp congestion
-NTFS3 driver
-RAFC
-KFence
-SSG iosched from S918BXXU3CXCF
-zstd v1.5.3
-Oneplus cpu_freq_bouncing driver
-Boeffla wakelock blocker
-TEO governor
-Other source optimizations and improvements
-
-Personal source changes:
-Added GameSpace support
-Added new refresh rate selector page
-Added support for light theme ( no more black qs when using light theme )
+This is Android 14 with July 2024 QPR3 (r53) security patches
 
 Notes:
-Signed user build
+==============================
+Signed build
 Gapps included
-KernelSU support
-Play Integrity passed by default
-Can dirty flash from old build
+Dropped KernelSU (flash this for KSU "https://drive.google.com/file/d/1Cd2QFjAvOpal0O6cncuv1wem6x5JADtf/view?usp=sharing")
+Play Integrity passed by default (As of 07/10/2024)
+
+Device changes:
+==============================
+Update common blobs from haydn V816.0.3.0.UKKMIXM
+Update device blobs from vili V816.0.2.0.UKDMIXM
+Build missing libraries for 14 QPR3
+Move to new RFS install_symlink targets
+Convert WiFi firmware symlinks to install_symlink targets
+Unset BUILD_BROKEN_INCORRECT_PARTITION_IMAGES
+Use AOSP default Codec2/OMX ranks
+Remove software omx codec references
+Remove media_codecs_google_c2*
+sepolicy: Label some wakeup nodes
+Fix thermal profile screen state handling
+Fix d2tw in AOD
+Patch libwa_sat to load libion from vendor
+Remove order preference for Thermal Profiles
+Update dolby vision blobs for QPR3
+Minor fixes and improvements
+
+Notable ROM changes:
+==============================
+Add required priv-app permissions for SystemUIGoogle
+Allow installing fake [odm|product|system_ext] packages
+Camera: Prevent crash when unable to find tag
+Cancel backup on transport error
+Don't set PRODUCT_ENABLE_UFFD_GC by default
+Don't use dirty backup area anymore
+Fix the restriction of odm partition overlays
+LensScreenshotReceiver: Return when failed to start activity
+Merge July 2024 security patches
+PhoneWindowManager: Check camera availability on camera key long press
+PixelPropsUtils: July 2024 Refactor
+PixelPropsUtils: July 2024 update
+Remove non existent health 2.0 recovery package
+Settings: Follow system theme for SD card activities
+Settings: Make AppCloning independent of DeviceConfig
+Settings: Skip auth for WiFi net share when unlocked in the last 60s
+Split the lock synchronizing LMKD socket reads/writes
+StatusBarIconController: Avoid crash due to incorrect casting
+SystemUI: Correctly monet theme the new volume panel
+SystemUI: Disable FaceUnlock Lockouts
+SystemUI: Fix Internet Tile showing no service
+SystemUI: Fix crash when resetting ShadeController views
+SystemUI: KeyguardUnlockAnimationController: Catch all exception
+SystemUI: VolumeDialogImpl: Add content observer for panel timeout
+SystemUIGoogle: Update
+SystemUIGoogle: Update smartspace proto
+Updater: Round dialogs
+VolumeDialog: Fix per-app volume on secondary users
+certification: 06/30/2024 Update
+codec2: a workaround to solve backward compatibility issue
+device_config: Drop machine learning back gesture
+device_config: Enable shared connectivity
+device_config: Update Launcher configs
+extras: Remove incompatible notification background
+extras: Update systemui clocks from husky-user-14-AP2A.240605.024
+fixup! Allow to suppress notifications sound/vibration if screen is ON
+fixup! SystemUI: Add API for runtime taskbar config
+fixup! SystemUI: Restore 14 QPR1 FingerprintInteractiveToAuth handling
+fwb: Add missing android.permission.REGISTER_STATS_PULL_ATOM
+overlay: device_config: Drop machine learning back gesture
+pixel-style: rro_overlays: Bump to AP2A.240605.024
+vendor: aconfig: Enable volume panel related configs
+vendor: aconfig: Remove use_media_router2_for_info_media_manager
+
+Personal source changes:
+==============================
+GameSpace
+New refresh rate selector page
+Smart 5G
+X-reality display engine (inspired from sony's x-reality engine)
+Follow light/dark theme in quick settings
