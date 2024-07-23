@@ -4,73 +4,49 @@ Notes:
 ==============================
 Signed build
 Gapps included
-Dropped KernelSU (flash this for KSU "https://drive.google.com/file/d/1Cd2QFjAvOpal0O6cncuv1wem6x5JADtf/view?usp=sharing")
-Play Integrity passed by default (As of 07/10/2024)
+KernelSU support by default
+Play Integrity passed by default (As of 07/23/2024)
 
 Device changes:
 ==============================
-Update common blobs from haydn V816.0.3.0.UKKMIXM
-Update device blobs from vili V816.0.2.0.UKDMIXM
-Build missing libraries for 14 QPR3
-Move to new RFS install_symlink targets
-Convert WiFi firmware symlinks to install_symlink targets
-Unset BUILD_BROKEN_INCORRECT_PARTITION_IMAGES
-Use AOSP default Codec2/OMX ranks
-Remove software omx codec references
-Remove media_codecs_google_c2*
-sepolicy: Label some wakeup nodes
-Fix thermal profile screen state handling
-Fix d2tw in AOD
-Patch libwa_sat to load libion from vendor
-Remove order preference for Thermal Profiles
-Update dolby vision blobs for QPR3
+Enable 24-bit support for wired headphones
+Checkout BT A2DP formats from fuxi
+Drop libmisoundfx
+Drop duplicate wakeup nodes
+Set bootanimation resolution to 1440
+Move input surface to CCodec
 Minor fixes and improvements
 
 Notable ROM changes:
 ==============================
-Add required priv-app permissions for SystemUIGoogle
-Allow installing fake [odm|product|system_ext] packages
-Camera: Prevent crash when unable to find tag
-Cancel backup on transport error
-Don't set PRODUCT_ENABLE_UFFD_GC by default
-Don't use dirty backup area anymore
-Fix the restriction of odm partition overlays
-LensScreenshotReceiver: Return when failed to start activity
-Merge July 2024 security patches
-PhoneWindowManager: Check camera availability on camera key long press
-PixelPropsUtils: July 2024 Refactor
-PixelPropsUtils: July 2024 update
-Remove non existent health 2.0 recovery package
-Settings: Follow system theme for SD card activities
-Settings: Make AppCloning independent of DeviceConfig
-Settings: Skip auth for WiFi net share when unlocked in the last 60s
-Split the lock synchronizing LMKD socket reads/writes
-StatusBarIconController: Avoid crash due to incorrect casting
-SystemUI: Correctly monet theme the new volume panel
-SystemUI: Disable FaceUnlock Lockouts
-SystemUI: Fix Internet Tile showing no service
-SystemUI: Fix crash when resetting ShadeController views
-SystemUI: KeyguardUnlockAnimationController: Catch all exception
-SystemUI: VolumeDialogImpl: Add content observer for panel timeout
-SystemUIGoogle: Update
-SystemUIGoogle: Update smartspace proto
-Updater: Round dialogs
-VolumeDialog: Fix per-app volume on secondary users
-certification: 06/30/2024 Update
-codec2: a workaround to solve backward compatibility issue
-device_config: Drop machine learning back gesture
-device_config: Enable shared connectivity
-device_config: Update Launcher configs
-extras: Remove incompatible notification background
-extras: Update systemui clocks from husky-user-14-AP2A.240605.024
 fixup! Allow to suppress notifications sound/vibration if screen is ON
-fixup! SystemUI: Add API for runtime taskbar config
-fixup! SystemUI: Restore 14 QPR1 FingerprintInteractiveToAuth handling
-fwb: Add missing android.permission.REGISTER_STATS_PULL_ATOM
-overlay: device_config: Drop machine learning back gesture
-pixel-style: rro_overlays: Bump to AP2A.240605.024
-vendor: aconfig: Enable volume panel related configs
-vendor: aconfig: Remove use_media_router2_for_info_media_manager
+AudioService: do not block focus request from applications compiled with lower version sdks
+Avoid device reboot caused by SecurityException
+BubbleStackView: Fix java code parsing error
+CSD: Remove bluetooth a2dp devices for safe volume index devices
+Evolver: Bring back Less boring heads up option
+Evolver: Bring back Pulse visualizer
+Evolver: Move in status bar battery preferences from LineageParts
+Evolver: Remove additional Battery styles customizations (FIXES CIRCLE TO SEARCH)
+Fix network can't handle simultaneously SS request for both subs
+Scale PS4/PS5 controller touchpad input
+Settings: Add Bluetooth/Wi-Fi timeout feature
+Settings: Add Market Name to device info
+Settings: Add a DEVICE field to the getSummary() function
+Settings: Allow scheduling always on display
+Settings: Bring back BT/Wifi timeout
+Settings: Expose radio info (*#*#4636#*#*)
+Settings: Hide radio info if device don't support voice
+Settings: Introduce AutoDimService
+Settings: fix unexpected routing selection
+SystemUI: Fix systemui crash when checking headups whitelist packages
+SystemUI: Move bluetooth dialog creation to LongClick method
+SystemUIGoogle: Adapt after gestural navigation API changes
+Update the icon for the adb wireless pairing code preference
+apns: Update Claro Ecuador APN
+base: add API for disabling gestural navigation
+display: Don't reset brightness adjustment on clearUserDataPoints()
+fixup! Settings: Use marketname for App Aspect Ratio summary
 
 Personal source changes:
 ==============================
