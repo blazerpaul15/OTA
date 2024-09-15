@@ -1,72 +1,54 @@
-This is Android 14 with August 2024 QPR3 (r55) security patches
+This is Android 14 with September 2024 QPR3 (r67) security patches
 
 Notes:
 ==============================
+- Dynamic build
 - Signed build
 - Gapps included
 - KernelSU support by default
-- Play Integrity passed by default (As of 08/31/2024)
+- Play Integrity passed by default (As of 09/15/2024)
 
 Device changes:
 ==============================
+- Switch to dynamic build
+- Fix Circle to search
+- Fix Ok google/assistant
 - Fix video playback issues and lags
 - Fix notification/battery led issue
-- Fix leica 1080p/60 fps / 4k/30fps video recording
+- Fix Leica 1080p/60 fps / 4k/30fps video recording
 - Upstream kernel to v4.14.352-openela
 - Minor fixes and improvements
 
 Notable ROM changes:
 ==============================
-- Evolver: Implement QS Split Shade
-- Evolver: Allow setting QS rows
-- Evolver: Themes: Add Evolution X Reveal boot animation
-- Evolver: Introduce bootanimation styles
-- Evolver: Themes: Add more classic boot animation styles
-- GamesPropsUtils: Spoof Brawl Stars to Mi 11T Pro
-- Don't dexpreopt prebuilt apps
-- GamesPropsUtils: Update model for call of duty to Lenovo Y700
-- Fix splashscreen VRI leak
-- Island: Implement Swipe to left/right to dismiss gesture
-- PixelConfigOverlayCommon: Update default notif access packages
-- PhoneWindowManager: Prevent NPE with voice search action
-- Remove useless addon.d file
-- PixelPropsUtils: Do not spoof mainline models to google photos
-- Settings: Import missing animations from UP1A.231005.007.A1
-- Settings: Add black theme styles
-- SettingsGoogle: Follow monet color in settings icon like AOSP
-- Should update surface position of the window before report resize
-- SurfaceControl: add more window types to consider NoVote
-- SystemUI: Remove unnecessary updates for QS tiles layout
-- SystemUI: Fix Island loop if suddenly close
-- SystemUI: Revamp face unlock indication
-- SystemUI: Properly inject TunerService for PhoneStatusBarPolicy
-- SystemUI: Use darkest neutral shade for island dark mode bg
-- SystemUI: Update track title and artist on metadata change
-- extras: themes: Remove conflicting Lorn icon pack signal padding
-- ThemeUtils: Use current user for THEME_CUSTOMIZATION_OVERLAY_PACKAGES
-- fixup! base: Hide ADB and developer setting enable status
-- VPN: fix crash on missing CCM
-- ignore virtual and overlay displays when turning displays off
-- certification: 08/30/2024 Update
-- services: Intercept locked apps launching from recents
-- device_config: Add more apps to live translate blocklist
-- wm: Ensure freeform tasks bounds gets updated when launching tasks
-- device_config: Disable Live Translate
-- wm: Make freeform windows always on top
-- device_config: Update launcher configs
-- etc: Add bootanim init
-- overlay: Add GameSpace to notification listener access
-- overlay: Add SystemUI to location extra packages
-- overlay: Add gms location history to extra location packages
-- overlay: Add tethering to location exemption
-- overlay: Hide Live Translate settings
-- overlay: configs: Disable SystemUpdateV2Activity
-- overlay: configs: Exempt Google Dialer from location indicator
-- rro_overlays: Bump to AD1A.240530.047
-- services: Add NPE check for updating system app from play store
-
-Personal source changes:
-==============================
-- GameSpace fixes
-- X-reality display engine (inspired from sony's x-reality engine)
-- Follow light/dark theme in quick settings
+- ActivityManagerService: Exclude more packages for receiver check
+- BrightnessController: Prevent possible memory leak
+- EdgeBackGestureHandler: Prevent possible memory leak
+- Evolver: Add three fingers swipe actions
+- Evolver: Add various Lock/Unlock sounds
+- GameSpace: Don't add floating action if game closed too quickly
+- GameSpace: Remove default action for three finger swipe
+- GameSpace: Show correct default settings
+- GameSpace: Update for three fingers gesture
+- Improvements for three fingers swipe actions
+- NSSLC: Prevent possible memory leak
+- NotificationMediaManager: Prevent possible memory leak
+- QsAnimator: Prevent possible memory leak
+- Remove default action for three finger swipe
+- Settings: Fix memory leak on sensormanager
+- Smart5gService: Add more functionalities
+- Smart5GService: Disable 5G when battery is low
+- Soundtrigger: Add back SoundTriggerDetector and model database
+- SystemUI: Add RESTRICTED_ASSIST_GESTURE_PROVIDER permission
+- SystemUI: Fix notification count not working after a reboot
+- ThermalManager: Don't hold mSamples lock while calling power HAL
+- Udfps Icons: Prevent possible memory leak
+- extras: Remove conflicting auto brightness icons
+- memory leak: Closes leaked instance
+- services: Fix crash caused by null fp daemon
+- services: Fix multi-touch behaviour
+- services: Improve shake gestures
+- services: Silence AppsOps debugging messages
+- services: Simplify registering for three fingers swipe actions
+- services: Use legacy behaviour for non-existent providers
+- voiceinteraction: Exempt ASI from soundtrigger enforcement
